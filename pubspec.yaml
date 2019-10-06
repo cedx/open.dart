@@ -1,0 +1,16 @@
+name: open
+version: 1.0.0
+
+author: Cédric Belin <cedric@belin.io>
+description: Open whatever you want, such as URLs, files or executables, regardless of the platform you use.
+documentation: https://dev.belin.io/open.dart/api
+homepage: https://dev.belin.io/open.dart
+issue_tracker: https://github.com/cedx/open.dart/issues
+repository: https://github.com/cedx/open.dart
+
+environment:
+  sdk: '>=2.5.0 <3.0.0'
+
+dev_dependencies:
+  grinder: ^0.8.3
+  test: ^1.8.0
