@@ -1,0 +1,23 @@
+name: build
+on:
+  push:
+  schedule:
+    - cron: '0 0 1 * *'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Dart
+        run: |
+          wget https://storage.googleapis.com/dart-archive/channels/stable/release/latest/sdk/dartsdk-linux-x64-release.zip
+          unzip dartsdk-linux-x64-release.zip -d ${HOME}
+      - name: Check environment
+        run: |
+          ${HOME}/dart-sdk/bin/dart --version
+          ${HOME}/dart-sdk/bin/pub --version
+      - name: Fetch sources
+        uses: actions/checkout@v1
+      - name: Install dependencies
+        run: ${HOME}/dart-sdk/bin/pub get
+      - name: Run tests
+        run: ${HOME}/dart-sdk/bin/pub run grinder test
