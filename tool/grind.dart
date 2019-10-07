@@ -3,6 +3,9 @@ import 'package:grinder/grinder.dart';
 /// Starts the build system.
 Future<void> main(List<String> args) => grind(args);
 
+@DefaultTask('Builds the project')
+void build() => Pub.run('build_runner', arguments: ['build', '--delete-conflicting-outputs']);
+
 @Task('Deletes all generated files and reset any saved state')
 void clean() {
   defaultClean();

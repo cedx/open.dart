@@ -3,4 +3,4 @@ library open;
 
 import 'dart:io';
 
-part 'src/is_wsl.dart';
+part 'src/wsl.dart';
