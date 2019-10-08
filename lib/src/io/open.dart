@@ -1,6 +1,7 @@
 part of '../io.dart';
 
 /// Opens the specified [target].
+/// Returns the spawned child process.
 Future<Process> open(String target, {String application, List<String> arguments, bool background = false, bool wait = false}) async {
   String command;
   final commandArgs = <String>[];
@@ -9,15 +10,15 @@ Future<Process> open(String target, {String application, List<String> arguments,
 
   if (Platform.isMacOS) {
     command = 'open';
-    if (background) commandArgs.add('--background');
     if (wait) commandArgs.add('--wait-apps');
+    if (background) commandArgs.add('--background');
     if (application != null) commandArgs..add('-a')..add(application);
     commandArgs.add(target);
     if (arguments != null) commandArgs..add('--args')..addAll(arguments);
   }
   else if (Platform.isWindows || isWsl) {
     command = isWsl ? 'cmd.exe' : 'cmd';
-    commandArgs..add('/c')..add('start')..add('""')..add('/b');
+    commandArgs.addAll(['/c', 'start', '""', '/b']);
     if (wait) commandArgs.add('/wait');
     if (application != null) commandArgs.add(isWsl && application.startsWith('/mnt/') ? await resolveWslPath(application) : application);
     if (arguments != null) commandArgs.addAll(arguments);
