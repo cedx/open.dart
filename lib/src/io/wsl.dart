@@ -8,8 +8,8 @@ Future<bool> get isWsl async {
   on FileSystemException { return false; }
 }
 
-/// TODO
-Future<String> resolvePath(String path) async {
-  // TODO
-  return '';
+/// Resolves the specified WSL [path] to a Windows path.
+Future<String> resolveWslPath(String path) async {
+  final result = await Process.run('wslpath', ['-w', path], stdoutEncoding: utf8);
+  return result.stdout.trim();
 }
