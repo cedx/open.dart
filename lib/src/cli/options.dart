@@ -5,7 +5,11 @@ part of '../cli.dart';
 class Options {
 
   /// Creates a new options object.
-  Options({this.background, this.help, this.rest, this.version, this.wait});
+  Options({this.application, this.background, this.help, this.rest, this.version, this.wait});
+
+  /// The application to open the target with.
+  @CliOption(abbr: 'a', help: 'TODO', negatable: false)
+  final String application;
 
   /// Value indicating whether to not bring the app to the foreground (macOS only).
   @CliOption(abbr: 'b', help: 'Do not bring the application to the foreground (macOS).', negatable: false)
