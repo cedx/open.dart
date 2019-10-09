@@ -22,6 +22,8 @@ Future<void> main(List<String> args) async {
       print(packageVersion);
       return;
     }
+
+    if (options.rest.isEmpty) throw const FormatException('A target must be provided.');
   }
 
   on FormatException {
@@ -31,5 +33,18 @@ Future<void> main(List<String> args) async {
   }
 
   // Run the program.
-  // TODO
+  try {
+    await open(
+      options.rest.first,
+      application: options.application,
+      arguments: args.skipWhile((arg) => arg != '--').skip(1).toList(),
+      background: options.background,
+      wait: options.wait
+    );
+  }
+
+  on Exception catch (err) {
+    print(err);
+    exitCode = 1;
+  }
 }
