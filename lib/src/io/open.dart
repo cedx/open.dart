@@ -5,7 +5,7 @@ part of '../io.dart';
 Future<Process> open(String target, {String application, List<String> arguments, bool background = false, bool wait = false}) async {
   String command;
   final commandArgs = <String>[];
-  final isWsl = Platform.isLinux && await isWindowsSubsystemForLinux;
+  final isWsl = await isWindowsSubsystemForLinux;
   var mode = ProcessStartMode.normal;
 
   if (Platform.isMacOS) {
