@@ -4,12 +4,10 @@ import 'package:test/test.dart';
 
 /// Tests the features of the [open] function.
 void main() => group('open()', () {
+  final googleChrome = Platform.isMacOS ? 'google chrome' : (Platform.isWindows ? 'chrome' : 'google-chrome');
+
   test('should open files in the default application', () async {
     await open('test/open_test.dart');
-  });
-
-  test('should wait for the application to close', () async {
-    await open('https://belin.io', wait: true);
   });
 
   test('should open URLs in the default application', () async {
@@ -21,7 +19,10 @@ void main() => group('open()', () {
   });
 
   test('should open URLs in the given application with arguments', () async {
-    final chromeApp = Platform.isMacOS ? 'google chrome' : (Platform.isWindows ? 'chrome' : 'google-chrome');
-    await open('https://belin.io', application: chromeApp, arguments: ['--incognito']);
+    await open('https://belin.io', application: googleChrome, arguments: ['--incognito']);
   });
+
+  test('should wait for the given application to close', () async {
+    await open('https://belin.io', application: googleChrome, wait: true);
+  }, timeout: Timeout.none);
 });
