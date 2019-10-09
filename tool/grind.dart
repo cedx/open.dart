@@ -32,7 +32,7 @@ void publish() => run('pub', arguments: ['publish', '--force']);
 
 @Task('Runs the test suites')
 void test() {
-  log('The test results must be verified manually as there is no way to check that they actually opened anything.');
+  log('The test assertions must be verified manually as there is no way to check that they actually opened anything.');
   Pub.run('build_runner', arguments: ['test', '--delete-conflicting-outputs']);
 }
 

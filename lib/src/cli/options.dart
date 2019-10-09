@@ -8,7 +8,7 @@ class Options {
   Options({this.application, this.background, this.help, this.rest, this.version, this.wait});
 
   /// The application to open the target with.
-  @CliOption(abbr: 'a', help: 'TODO', negatable: false)
+  @CliOption(abbr: 'a', help: 'The application to open the target with.')
   final String application;
 
   /// Value indicating whether to not bring the app to the foreground (macOS only).
