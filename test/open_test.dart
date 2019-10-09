@@ -5,6 +5,10 @@ import 'package:test/test.dart';
 /// Tests the features of the [open] function.
 void main() => group('open()', () {
   final googleChrome = Platform.isMacOS ? 'google chrome' : (Platform.isWindows ? 'chrome' : 'google-chrome');
+  const googleChromeWsl = '/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe';
+
+  bool isWsl;
+  setUpAll(() async => isWsl ??= await isWindowsSubsystemForLinux);
 
   test('should open files in the default application', () async {
     await open('test/open_test.dart');
@@ -25,4 +29,12 @@ void main() => group('open()', () {
   test('should wait for the given application to close', () async {
     await open('https://belin.io', application: googleChrome, wait: true);
   }, timeout: Timeout.none);
+
+  test('should open URLs in the specified application by using a given WSL path', () async {
+    if (isWsl) await open('https://belin.io', application: googleChromeWsl);
+  });
+
+  test('should open URLs in the specified application with arguments by using a given WSL path', () async {
+    if (isWsl) await open('https://belin.io', application: googleChromeWsl, arguments: ['--incognito']);
+  });
 });
