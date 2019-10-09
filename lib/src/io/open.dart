@@ -18,7 +18,7 @@ Future<Process> open(String target, {String application, List<String> arguments,
   }
   else if (Platform.isWindows || isWsl) {
     command = isWsl ? 'cmd.exe' : 'cmd';
-    commandArgs.addAll(['/c', 'start', '""', '/b']);
+    commandArgs.addAll(['/c', 'start', '', '/b']);
     if (wait) commandArgs.add('/wait');
     if (application != null) commandArgs.add(isWsl && application.startsWith('/mnt/') ? await resolveWslPath(application) : application);
     if (arguments != null) commandArgs.addAll(arguments);
