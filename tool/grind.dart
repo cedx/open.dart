@@ -31,7 +31,10 @@ void lint() => Analyzer.analyze(existingSourceDirs);
 void publish() => run('pub', arguments: ['publish', '--force']);
 
 @Task('Runs the test suites')
-void test() => Pub.run('build_runner', arguments: ['test', '--delete-conflicting-outputs']);
+void test() {
+  log('The test results must be verified manually as there is no way to check that they actually opened anything.');
+  Pub.run('build_runner', arguments: ['test', '--delete-conflicting-outputs']);
+}
 
 @Task('Upgrades the project to the latest revision')
 void upgrade() {
