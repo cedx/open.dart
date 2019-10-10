@@ -34,7 +34,7 @@ Future<Process> open(String target, {String application, List<String> arguments,
   final process = await Process.start(command, commandArgs, mode: mode);
   return !wait ? process : Future(() async {
     final exitCode = await process.exitCode;
-    if (exitCode > 0) throw ProcessException(command, commandArgs, 'Exited with code $exitCode.');
+    if (exitCode != 0) throw ProcessException(command, commandArgs, 'Exited with code $exitCode.');
     return process;
   });
 }
