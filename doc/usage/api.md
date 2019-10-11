@@ -29,6 +29,10 @@ Future<void> main() async {
 The function returns a [`Future`](https://api.dart.dev/stable/dart-async/Future-class.html) for the spawned child process, an instance of the [`Process` class](https://api.dart.dev/stable/dart-io/Process-class.html).  
 You would normally not need to use this for anything, but it can be useful if you'd like to perform operations directly on the spawned process.
 
+!!! info
+    The function uses the command `start` on Windows, `open` on macOS
+    and `xdg-open` on other platforms.
+
 ## Options
 The behavior of the `open()` function can be customized using the following optional named parameters.
 
