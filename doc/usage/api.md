@@ -35,7 +35,7 @@ The behavior of the `open()` function can be customized using the following opti
 ### String **application**
 Specify the application to open the target with.
 
-The application name is platform dependent. For example, Goole Chrome is `google chrome` on macOS, `google-chrome` on Linux and `chrome` on Windows.
+The application name is platform dependent. For example, Goole Chrome is `chrome` on Windows, `google-chrome` on Linux and `google chrome` on macOS.
 
 You may also pass in the application's full path. For example on Windows Subsystem for Linux, this can be `"/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe"`.
 
