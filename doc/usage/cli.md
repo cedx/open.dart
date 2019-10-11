@@ -30,8 +30,15 @@ Options:
 For example:
 
 ```shell
-$ open_cli https://belin.io
-$ open_cli --application firefox https://belin.io
-$ open_cli --application chrome https://belin.io -- --incognito
-$ open_cli funny.gif
+# Open a URL in the default browser.
+open_cli https://belin.io
+
+# Open a URL in the given browser.
+open_cli --application firefox https://belin.io
+
+# Open a URL in the given browser, using the specified arguments.
+open_cli --application chrome https://belin.io -- --incognito
+
+# Open an image in the default viewer and wait for the opened application to quit.
+open_cli --wait funny.gif
 ```
