@@ -54,14 +54,14 @@ Specify the arguments to pass when using a custom `application` option.
 await open('https://belin.io', application: 'chrome', arguments: ['--incognito']);
 ```
 
-### bool **background** = `false`
+### bool **background**
 Do not bring the application to the foreground (macOS only).
 
 ```dart
 await open('spreadsheet.xlsx', background: true);
 ```
 
-### bool **wait** = `false`
+### bool **wait**
 Wait for the opened application to exit before completing the `Future`. If `false`, it's completed immediately after opening the application.
 
 ```dart
