@@ -1,5 +1,5 @@
 name: open
-version: 1.0.0
+version: 1.1.0
 
 author: Cédric Belin <cedric@belin.io>
 description: Open whatever you want, such as URLs, files or executables, regardless of the platform you use.
