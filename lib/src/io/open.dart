@@ -2,7 +2,7 @@ part of '../io.dart';
 
 /// Opens the specified [target].
 /// Returns the spawned child process.
-Future<Process> open(String target, {String application, List<String> arguments, bool background = false, bool wait = false}) async {
+Future<Process> open(String target, {String application, Iterable<String> arguments, bool background = false, bool wait = false}) async {
   String command;
   final commandArgs = <String>[];
   final isWsl = await isWindowsSubsystemForLinux;

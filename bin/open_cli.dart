@@ -29,7 +29,7 @@ Future<void> main(List<String> args) async {
     await open(
       options.rest.first,
       application: options.application,
-      arguments: args.skipWhile((arg) => arg != '--').skip(1).toList(),
+      arguments: options.rest.skip(1),
       background: options.background,
       wait: options.wait
     );
