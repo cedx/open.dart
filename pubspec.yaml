@@ -8,7 +8,7 @@ issue_tracker: https://github.com/cedx/open.dart/issues
 repository: https://github.com/cedx/open.dart
 
 environment:
-  sdk: '>=2.6.0 <3.0.0'
+  sdk: '>=2.7.0 <3.0.0'
 
 executables:
   open_cli: open_cli
