@@ -12,7 +12,7 @@ class Options {
   final String application;
 
   /// Value indicating whether to not bring the app to the foreground (macOS only).
-  @CliOption(abbr: 'b', help: 'Do not bring the application to the foreground (macOS).', negatable: false)
+  @CliOption(abbr: 'b', help: 'Do not bring the application to the foreground (macOS only).', negatable: false)
   final bool background;
 
   /// Value indicating whether to output usage information.

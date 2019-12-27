@@ -21,7 +21,7 @@ Usage: open_cli [options] <target> [-- <arguments>]
 
 Options:
 -a, --application    The application to open the target with.
--b, --background     Do not bring the application to the foreground (macOS).
+-b, --background     Do not bring the application to the foreground (macOS only).
 -h, --help           Output usage information.
 -v, --version        Output the version number.
 -w, --wait           Wait for the opened application to exit.

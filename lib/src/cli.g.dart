@@ -19,7 +19,7 @@ ArgParser _$populateOptionsParser(ArgParser parser) => parser
       abbr: 'a', help: 'The application to open the target with.')
   ..addFlag('background',
       abbr: 'b',
-      help: 'Do not bring the application to the foreground (macOS).',
+      help: 'Do not bring the application to the foreground (macOS only).',
       negatable: false)
   ..addFlag('help',
       abbr: 'h', help: 'Output usage information.', negatable: false)
