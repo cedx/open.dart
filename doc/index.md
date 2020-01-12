@@ -11,7 +11,7 @@ dependencies:
   open: *
 ```
 
-Install the latest version of **Open.dart** with [Pub](https://dart.dev/tools/pub/cmd):
+Install the latest version of **Open.dart** with [Pub](https://dart.dev/tools/pub):
 
 ```shell
 pub get
