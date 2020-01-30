@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [1.3.0](https://github.com/cedx/open.dart/compare/v1.2.0...v1.3.0)
+- Raised the [Dart SDK](https://dart.dev/tools/sdk) constraint.
+- Updated the package dependencies.
+
 ## Version [1.2.0](https://github.com/cedx/open.dart/compare/v1.1.0...v1.2.0)
 - Raised the [Dart SDK](https://dart.dev/tools/sdk) constraint.
 - Updated the package dependencies.
