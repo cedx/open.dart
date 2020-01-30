@@ -3,6 +3,8 @@ part of '../io.dart';
 /// Opens the specified [target].
 /// Returns the spawned child process.
 Future<Process> open(String target, {String application, Iterable<String> arguments, bool background = false, bool wait = false}) async {
+  assert(target.isNotEmpty);
+
   String command;
   final commandArgs = <String>[];
   final isWsl = await isWindowsSubsystemForLinux;

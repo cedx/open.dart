@@ -10,6 +10,7 @@ Future<bool> get isWindowsSubsystemForLinux async {
 
 /// Resolves the specified WSL [path] to a Windows path.
 Future<String> resolveWslPath(String path) async {
+  assert(path.isNotEmpty);
   final result = await Process.run('wslpath', ['-w', path], stdoutEncoding: utf8);
   return result.stdout.trim();
 }
