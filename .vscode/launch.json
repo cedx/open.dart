@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "enableAsserts": true,
+      "name": "Tests",
+      "program": "test/",
+      "request": "launch",
+      "type": "dart"
+    }
+  ]
+}
