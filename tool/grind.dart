@@ -9,8 +9,15 @@ void build() => Pub.run('build_runner', arguments: ['build', '--delete-conflicti
 @Task('Deletes all generated files and reset any saved state')
 void clean() {
   defaultClean();
-  ['.dart_tool/build', 'doc/api', webDir.path].map(getDir).forEach(delete);
-  FileSet.fromDir(getDir('var'), pattern: '!.*', recurse: true).files.forEach(delete);
+  delete(getFile('var/lcov.info'));
+  ['.dart_tool/build', 'var/test', webDir.path].map(getDir).forEach(delete);
+}
+
+@Task('Uploads the results of the code coverage')
+void coverage() {
+  final arguments = ['--in=var/test', '--lcov', '--out=var/lcov.info', '--packages=.packages', '--report-on=lib'];
+  Pub.run('coverage', script: 'format_coverage', arguments: arguments);
+  Pub.run('coveralls', arguments: ['var/lcov.info']);
 }
 
 @Task('Builds the documentation')
@@ -31,9 +38,10 @@ void lint() => Analyzer.analyze(existingSourceDirs);
 void publish() => run('pub', arguments: ['publish', '--force']);
 
 @Task('Runs the test suites')
+@Depends(build)
 void test() {
   log('The test assertions must be verified manually as there is no way to check that they actually opened anything.');
-  Pub.run('build_runner', arguments: ['test', '--delete-conflicting-outputs']);
+  Pub.run('test', arguments: ['--coverage=var']);
 }
 
 @Task('Upgrades the project to the latest revision')
