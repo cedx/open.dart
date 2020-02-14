@@ -3,7 +3,7 @@ site_description: Open whatever you want in Dart, such as URLs, files or executa
 site_author: Cédric Belin - cedric@belin.io
 site_url: https://dev.belin.io/open.dart
 
-docs_dir: ../doc
+docs_dir: .
 site_dir: ../web
 
 repo_name: GitHub
