@@ -4,9 +4,11 @@
 *.cmd text
 *.dart text
 *.http text
+*.json text
 *.md text
 *.txt text
 *.yaml text
+*.yml text
 
 *.ico binary
 *.jpg binary
