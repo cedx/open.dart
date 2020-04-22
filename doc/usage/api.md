@@ -1,5 +1,7 @@
-path: blob/master
+---
+path: src/branch/master
 source: lib/src/io/open.dart
+---
 
 # Application programming interface
 This package provides a single function, `open()`, allowing to open a document or URL:

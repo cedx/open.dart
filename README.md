@@ -4,13 +4,13 @@
 Open whatever you want in [Dart](https://dart.dev), such as URLs, files or executables, regardless of the platform you use.
 
 ## Documentation
-- [User guide](https://dev.belin.io/open.dart)
+- [User guide](https://docs.belin.io/open.dart)
 - [API reference](https://pub.dev/documentation/open)
 
 ## Development
-- [Git repository](https://github.com/cedx/open.dart)
+- [Git repository](https://git.belin.io/cedx/open.dart)
 - [Pub package](https://pub.dev/packages/open)
-- [Submit an issue](https://github.com/cedx/open.dart/issues)
+- [Submit an issue](https://git.belin.io/cedx/open.dart/issues)
 
 ## License
-[Open.dart](https://dev.belin.io/open.dart) is distributed under the MIT License.
+[Open.dart](https://docs.belin.io/open.dart) is distributed under the MIT License.
