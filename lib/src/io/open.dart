@@ -28,8 +28,7 @@ Future<Process> open(String target, {String application, Iterable<String> argume
   }
   else {
     final packageUri = await Isolate.resolvePackageUri(Uri.parse('package:open/'));
-    final localXdgOpen = File(packageUri.resolve('../bin/xdg-open').toFilePath());
-    command = application ?? (localXdgOpen.existsSync() && !Platform.isAndroid && !Platform.isIOS ? localXdgOpen.path : 'xdg-open');
+    command = application ?? (!Platform.isAndroid && !Platform.isIOS ? packageUri.resolve('../bin/xdg-open').toFilePath() : 'xdg-open');
     if (arguments != null) commandArgs.addAll(arguments);
     if (!wait) mode = ProcessStartMode.detached;
     commandArgs.add(target);
