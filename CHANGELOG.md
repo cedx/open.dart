@@ -1,6 +1,8 @@
 # Changelog
 
 ## Version [2.0.0](https://git.belin.io/cedx/open.dart/compare/v1.4.0...v2.0.0)
+- Breaking change: moved the `isWindowsSubsystemForLinux` and `resolveWslPath()` top-level members to the `Platform` abstract class.
+- Added the `Platform.isDocker` static property.
 
 ## Version [1.4.0](https://git.belin.io/cedx/open.dart/compare/v1.3.0...v1.4.0)
 - Updated the documentation.
