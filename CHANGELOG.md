@@ -1,5 +1,7 @@
 # Changelog
 
+## Version [2.0.0](https://git.belin.io/cedx/open.dart/compare/v1.4.0...v2.0.0)
+
 ## Version [1.4.0](https://git.belin.io/cedx/open.dart/compare/v1.3.0...v1.4.0)
 - Updated the documentation.
 - Updated the package dependencies.
