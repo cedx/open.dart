@@ -1,14 +1,14 @@
-import 'dart:io';
+import 'dart:io' as io;
 import 'package:open/open.dart';
 import 'package:test/test.dart';
 
 /// Tests the features of the [open] function.
 void main() => group('open()', () {
-  final googleChrome = Platform.isMacOS ? 'google chrome' : (Platform.isWindows ? 'chrome' : 'google-chrome');
+  final googleChrome = io.Platform.isMacOS ? 'google chrome' : (io.Platform.isWindows ? 'chrome' : 'google-chrome');
   const googleChromeWsl = '/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe';
 
   bool isWsl;
-  setUpAll(() async => isWsl ??= await isWindowsSubsystemForLinux);
+  setUpAll(() async => isWsl ??= await Platform.isWindowsSubsystemForLinux);
 
   test('should open files in the default application', () async {
     await open('test/open_test.dart');
