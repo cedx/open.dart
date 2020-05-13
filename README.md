@@ -5,7 +5,7 @@ Open whatever you want in [Dart](https://dart.dev), such as URLs, files or execu
 
 ## Documentation
 - [User guide](https://docs.belin.io/open.dart)
-- [API reference](https://pub.dev/documentation/open)
+- [API reference](https://api.belin.io/open.dart)
 
 ## Development
 - [Git repository](https://git.belin.io/cedx/open.dart)
