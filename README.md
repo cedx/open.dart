@@ -1,5 +1,5 @@
 # Open.dart
-![Runtime](https://img.shields.io/badge/dart-%3E%3D2.8-brightgreen.svg) ![Release](https://img.shields.io/pub/v/open.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Runtime](https://badgen.net/badge/dart/%3E%3D2.8/green) ![Release](https://img.shields.io/pub/v/open.svg) ![License](https://badgen.net/badge/license/MIT/blue)
 
 Open whatever you want in [Dart](https://dart.dev), such as URLs, files or executables, regardless of the platform you use.
 
