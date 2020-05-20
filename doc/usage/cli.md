@@ -6,15 +6,15 @@ source: lib/src/cli/options.dart
 # Command line interface
 From a command prompt, install the `open_cli` executable:
 
-```shell
+``` shell
 pub global activate open
 ```
 !!! tip
-    Consider adding the [`pub global`](https://dart.dev/tools/pub/cmd/pub-global) executables directory to your system path.
+	Consider adding the [`pub global`](https://dart.dev/tools/pub/cmd/pub-global) executables directory to your system path.
 
 Then use it to open a document or URL:
 
-```shell
+``` shell
 $ open_cli --help
 
 Open whatever you want, such as URLs, files or executables, regardless of the platform you use.
@@ -31,7 +31,7 @@ Options:
 
 For example:
 
-```shell
+``` shell
 # Open a URL in the default browser.
 open_cli https://belin.io
 
