@@ -1,12 +1,7 @@
----
-path: src/branch/main
-source: lib/src/io/open.dart
----
-
 # Application programming interface
 This package provides a single function, `open()`, allowing to open a document or URL:
 
-``` dart
+```dart
 import "package:open/open.dart";
 
 Future<void> main() async {
@@ -28,11 +23,10 @@ Future<void> main() async {
 }
 ```
 
-The function returns a [`Future`](https://api.dart.dev/stable/dart-async/Future-class.html) for the spawned child process, an instance of the [`Process` class](https://api.dart.dev/stable/dart-io/Process-class.html).  
+The function returns a `Future` for the spawned child process, an instance of the `Process` class.  
 You would normally not need to use this for anything, but it can be useful if you'd like to perform operations directly on the spawned process.
 
-!!! info
-	The function uses the command `start` on Windows, `open` on macOS and `xdg-open` on other platforms.
+?> The function uses the command `start` on Windows, `open` on macOS and `xdg-open` on other platforms.
 
 ## Options
 The behavior of the `open()` function can be customized using the following optional named parameters.
@@ -44,30 +38,29 @@ The application name is platform dependent. For example, Goole Chrome is `chrome
 
 You may also pass in the application's full path. For example on Windows Subsystem for Linux, this can be `"/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe"`.
 
-``` dart
+```dart
 await open("https://belin.io", application: "firefox");
 ```
 
 ### List&lt;String&gt; **arguments**
 Specify the arguments to pass when using a custom `application` option.
 
-``` dart
+```dart
 await open("https://belin.io", application: "chrome", arguments: ["--incognito"]);
 ```
 
 ### bool **background**
 Do not bring the application to the foreground (macOS only).
 
-``` dart
+```dart
 await open("spreadsheet.xlsx", background: true);
 ```
 
 ### bool **wait**
 Wait for the opened application to exit before completing the `Future`. If `false`, it's completed immediately after opening the application.
 
-``` dart
+```dart
 await open("funny.gif", wait: true);
 ```
 
-!!! tip
-	On Windows, you have to explicitly specify the `application` option for it to be able to wait.
+?> On Windows, you have to explicitly specify the `application` option for it to be able to wait.
