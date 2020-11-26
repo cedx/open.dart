@@ -1,7 +1,7 @@
 # Open.dart
 ![Runtime](https://badgen.net/pub/sdk-version/open) ![Release](https://badgen.net/pub/v/open) ![License](https://badgen.net/pub/license/open) ![Likes](https://badgen.net/pub/likes/open)
 
-Open whatever you want in [Dart](https://dart.dev), such as URLs, files or executables, regardless of the platform you use.
+> Open whatever you want in [Dart](https://dart.dev), such as URLs, files or executables, regardless of the platform you use.
 
 ## Documentation
 - [User guide](https://docs.belin.io/open.dart)
