@@ -2,10 +2,10 @@
 From a command prompt, install the `open_cli` executable:
 
 ```shell
-pub global activate open
+dart pub global activate open
 ```
 
-?> Consider adding the `pub global` executables directory to your system path.
+?> Consider adding the `dart pub global` executables directory to your system path.
 
 Then use it to open a document or URL:
 
