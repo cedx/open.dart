@@ -1,4 +1,4 @@
 # See also
-- [API reference](https://api.belin.io/open.dart)
+- [API reference](https://pub.dev/documentation/open)
 - [Pub package](https://pub.dev/packages/open)
-- [Submit an issue](https://git.belin.io/cedx/open.dart/issues)
+- [Submit an issue](https://github.com/cedx/open.dart/issues)

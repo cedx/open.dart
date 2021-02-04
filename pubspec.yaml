@@ -2,9 +2,9 @@ name: open
 version: 2.0.0
 
 description: Open whatever you want, such as URLs, files or executables, regardless of the platform you use.
-homepage: https://docs.belin.io/open.dart
-issue_tracker: https://git.belin.io/cedx/open.dart/issues
-repository: https://git.belin.io/cedx/open.dart
+homepage: https://cedx.github.io/open.dart
+issue_tracker: https://github.com/cedx/open.dart/issues
+repository: https://github.com/cedx/open.dart
 
 environment:
   sdk: ">=2.10.0 <3.0.0"
